@@ -6,3 +6,7 @@
 (define pkg-desc "Description Here")
 (define version "0.0")
 (define pkg-authors '(Administrator))
+
+;These are redundant, combine!
+(define release-url "https://codespells-org.s3.amazonaws.com/ModBuilds/fire-particles/0.0/BuildUnreal.zip")
+(define release-s3-bucket "codespells-org/ModBuilds/fire-particles/0.0/BuildUnreal.zip")
