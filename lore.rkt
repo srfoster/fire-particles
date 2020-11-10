@@ -6,6 +6,7 @@
 (provide name
          description
          runes
+	 preview-image
          )
 
 ;Each rune has lore... (Could pop it up in game when you collect one)
@@ -26,27 +27,27 @@
 
 (define (runes)
   (list
-    @md{
-    ## Flames Rune
+    ;Lists here are gross.  
+    ;Some kind of rune info struct (along with collection info and build info)
 
-    @(flames-rune)}
+    ;Put example code in these demos...
+    ;   Might need to add runes from other mods.  Dynamic require their langs/runes/lores, etc.  Be able to link from a Rune to its lore page...
+    (list
+      "Flames"
+      (flames-rune)
+      "This rune creates a small, persistent flame"
+      )
+    (list
+      "Fire Beam"
+      (fire-beam-rune)
+      "This rune creates a upright beam of fire"
+      )
+    (list
+      "Explosion"
+      (explosion-rune)
+      "This rune creates a explosion lasting for just an instant."
+      )))
 
-    @md{
-    ## Fire Beam Rune
+(define (preview-image)
+  (flames-rune))
 
-    @(fire-beam-rune)}
-
-    @md{ 
-    ## Explosion Rune
-
-    @(explosion-rune)}
-
-    )
-  )
-
-#;
-(module+ main
-	 (render #:to "out" 
-		 (list
-		   (bootstrap-files)
-		   (lore))))
