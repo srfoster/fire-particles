@@ -1,3 +1,3 @@
 fire-particles
 ==============
-README text here.
+`fire-particles` is a CodeSpells mod! Learn more at https://codespells.org.
