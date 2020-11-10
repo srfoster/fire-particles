@@ -1,25 +1,26 @@
 #lang codespells
 
+(require fire-particles/mod-info)
 (require 2htdp/image)
 
 (define-classic-rune (flames)
   #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/1519956-200.png")
-  (spawn-this-mod-blueprint "Flames"))
+  (spawn-mod-blueprint pak-folder mod-name "Flames"))
 
 (define-classic-rune (fire-beam)
   #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/898064-200.png")
-  (spawn-this-mod-blueprint "FireBeam"))
+  (spawn-mod-blueprint pak-folder mod-name "FireBeam"))
 
 (define-classic-rune (explosion)
   #:background "red"
   #:foreground
   (bitmap/url  "https://static.thenounproject.com/png/2049313-200.png")
-  (spawn-this-mod-blueprint "Explosion"))
+  (spawn-mod-blueprint pak-folder mod-name "Explosion"))
 
 
-(define-classic-rune-lang my-mod-lang
+(define-classic-rune-lang my-mod-lang #:eval-from main.rkt
   (flames fire-beam explosion))
 
 (module+ main
