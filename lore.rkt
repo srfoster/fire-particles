@@ -20,12 +20,12 @@
     (rune-lore
       #:name "Flames"
       #:rune (flames-rune)
-      #:description "This rune creates a small, persistent flame"
+      #:description "This rune creates a small, persistent flame."
       )
     (rune-lore
       #:name "Fire Beam"
       #:rune (fire-beam-rune)
-      #:description "This rune creates a upright beam of fire"
+      #:description "This rune creates a upright beam of fire."
       )
     (rune-lore
       #:name "Explosion"
