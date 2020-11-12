@@ -3,6 +3,9 @@
 (require fire-particles
 	 codespells/lore)
 
+(define-runtime-path preview-image
+                     "images/preview.png")
+
 (define-rune-collection-lore 
   #:name "Illusions of Flame"
   #:description 
@@ -32,5 +35,5 @@
       #:rune (explosion-rune)
       #:description "This rune creates a explosion lasting for just an instant."
       ))
-  #:preview-image (flames-rune))
+  #:preview-image preview-image)
 
