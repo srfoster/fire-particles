@@ -23,17 +23,39 @@
     (rune-lore
       #:name "Flames"
       #:rune (flames-rune)
-      #:description "This rune creates a small, persistent flame."
+      #:description @md{
+      This rune creates a small, persistent flame.
+
+      @(rune-code-example
+	 (my-mod-lang #:with-paren-runes? #t)
+	 (flames)
+	 flames-demo.mp4)
+      }
       )
     (rune-lore
       #:name "Fire Beam"
       #:rune (fire-beam-rune)
-      #:description "This rune creates a upright beam of fire."
+      #:description @md{
+      This rune creates a upright beam of fire.
+
+      @(rune-code-example
+	 (my-mod-lang #:with-paren-runes? #t)
+	 (fire-beam)
+	 fire-beam-demo.mp4)
+      }
+
       )
     (rune-lore
       #:name "Explosion"
       #:rune (explosion-rune)
-      #:description "This rune creates a explosion lasting for just an instant."
+      #:description @md{
+      This rune creates a explosion lasting for just an instant.
+
+      @(rune-code-example
+	 (my-mod-lang #:with-paren-runes? #t)
+	 (explosion)
+	 explosion-demo.mp4)
+      }
       ))
   #:preview-image preview-image)
 
