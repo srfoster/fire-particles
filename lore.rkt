@@ -49,7 +49,7 @@
       #:name "Explosion"
       #:rune (explosion-rune)
       #:description @md{
-      An illusion of an explosion, which @b{Firebeard the Great} employed as a stunning mechanism against the hords.
+      An illusion of an explosion, which @b{Firebeard the Great} employed as a stunning mechanism against the hordes.
 
       @(rune-code-example
 	 (my-mod-lang #:with-paren-runes? #t)
