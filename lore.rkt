@@ -24,7 +24,7 @@
       #:name "Flames"
       #:rune (flames-rune)
       #:description @md{
-      This rune creates a small, persistent flame.
+      This rune represents a small, persistent flame.  It does not burn, but it looks like it might.  @b{Firebeard the Great} was the first to prove the @b{Dark Invaders} to be stymied by the mere illusion of fire, as well as fire itself.
 
       @(rune-code-example
 	 (my-mod-lang #:with-paren-runes? #t)
@@ -36,7 +36,7 @@
       #:name "Fire Beam"
       #:rune (fire-beam-rune)
       #:description @md{
-      This rune creates a upright beam of fire.
+      @b{Firebeard the Great} created this beam of fire to construct the illusion of cages to hold prisoners of war.  It held them, for a time. 
 
       @(rune-code-example
 	 (my-mod-lang #:with-paren-runes? #t)
@@ -49,7 +49,7 @@
       #:name "Explosion"
       #:rune (explosion-rune)
       #:description @md{
-      This rune creates a explosion lasting for just an instant.
+      An illusion of an explosion, which @b{Firebeard the Great} employed as a stunning mechanism against the hords.
 
       @(rune-code-example
 	 (my-mod-lang #:with-paren-runes? #t)
