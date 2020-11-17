@@ -3,9 +3,6 @@
 (require fire-particles
 	 codespells/lore)
 
-(define-runtime-path preview-image
-                     "images/preview.png")
-
 (define-rune-collection-lore 
   #:name "Illusions of Flame"
   #:description 
@@ -57,5 +54,5 @@
 	 explosion-demo.mp4)
       }
       ))
-  #:preview-image preview-image)
+  #:preview-image preview.png)
 
