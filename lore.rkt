@@ -1,7 +1,15 @@
 #lang at-exp racket
 
-(require fire-particles
-	 codespells/lore)
+(require codespells/lore
+         (only-in codespells append-rune-langs
+                             require-mod))
+
+(require-mod hierarchy)
+(require-mod spawners)
+(require-mod fire-particles)
+(require-mod ice-particles)
+(require-mod rocks)
+
 
 (define-rune-collection-lore 
   #:name "Illusions of Flame"
@@ -24,10 +32,24 @@
       This rune represents a small, persistent flame.  It does not burn, but it looks like it might.  @b{Firebeard the Great} was the first to prove the @b{Dark Invaders} to be stymied by the mere illusion of fire, as well as fire itself.
 
       @(rune-code-example
-	 (my-mod-lang #:with-paren-runes? #t)
+	 (fire-particles:my-mod-lang #:with-paren-runes? #t)
 	 (flames)
 	 flames-demo.mp4)
+
+      @p{This flame rune can be combined with runes from the @b{Conjurings of Rocks} collection to make flaming rocks.}
+
+      @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (rocks:my-mod-lang)
+           (hierarchy:my-mod-lang)
+           (fire-particles:my-mod-lang #:with-paren-runes? #t))
+         (parentify 
+           forest-rock 
+           flames)
+         flames-with-rock-demo.mp4)
       }
+       
       )
     (rune-lore
       #:name "Fire Beam"
@@ -36,7 +58,7 @@
       @b{Firebeard the Great} created this beam of fire to construct the illusion of cages to hold prisoners of war.  It held them, for a time. 
 
       @(rune-code-example
-	 (my-mod-lang #:with-paren-runes? #t)
+	 (fire-particles:my-mod-lang #:with-paren-runes? #t)
 	 (fire-beam)
 	 fire-beam-demo.mp4)
       }
@@ -49,9 +71,25 @@
       An illusion of an explosion, which @b{Firebeard the Great} employed as a stunning mechanism against the hordes.
 
       @(rune-code-example
-	 (my-mod-lang #:with-paren-runes? #t)
+	 (fire-particles:my-mod-lang #:with-paren-runes? #t)
 	 (explosion)
 	 explosion-demo.mp4)
+      
+      Who says fire and ice don't mix? Try these runes: 
+
+      @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (ice-particles:my-mod-lang)
+           (spawners:my-mod-lang)
+           (hierarchy:my-mod-lang)
+           (fire-particles:my-mod-lang #:with-paren-runes? #t))
+         (parentify 
+           ice-ball 
+           (spawner
+             explosion
+             ))
+         ice-explosion-spawner-demo.mp4)
       }
       ))
   #:preview-image preview.png)
