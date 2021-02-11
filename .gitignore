@@ -5,7 +5,13 @@
 compiled/
 /doc/
 BuildUnreal/
-Unreal/
+Unreal/FireParticles/Plugins/FireParticles/Content/BeamAndLaserFX01
+Unreal/FireParticles/Plugins/FireParticles/Content/FXVarietyPack
+Unreal/*/Binaries
+Unreal/*/Build
+Unreal/*/DerivedDataCache
+Unreal/*/Intermediate
+Unreal/*/Saved
 *.bak
 BuildUnreal.zip
 Unreal.zip

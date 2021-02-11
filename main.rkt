@@ -28,6 +28,6 @@
    (build-path (current-directory) ".." ".." ".." "CodeSpellsWorkspace"))
   
   (once-upon-a-time
-   #:world (demo-world)
+   #:world (cave-world)
    #:aether (demo-aether
              #:lang (my-mod-lang #:with-paren-runes? #t))))
