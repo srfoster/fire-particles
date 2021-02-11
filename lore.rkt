@@ -1,7 +1,15 @@
 #lang at-exp racket
 
-(require fire-particles
-	 codespells/lore)
+(require codespells/lore
+         (only-in codespells append-rune-langs
+                             require-mod))
+
+(require-mod hierarchy)
+(require-mod spawners)
+(require-mod fire-particles)
+(require-mod ice-particles)
+(require-mod rocks)
+
 
 (define-rune-collection-lore 
   #:name "Illusions of Flame"
@@ -20,17 +28,69 @@
     (rune-lore
       #:name "Flames"
       #:rune (flames-rune)
-      #:description "This rune creates a small, persistent flame."
+      #:description @md{
+      This rune represents a small, persistent flame.  It does not burn, but it looks like it might.  @b{Firebeard the Great} was the first to prove the @b{Dark Invaders} to be stymied by the mere illusion of fire, as well as fire itself.
+
+      @(rune-code-example
+	 (fire-particles:my-mod-lang #:with-paren-runes? #t)
+	 (flames)
+	 flames-demo.mp4)
+
+      @p{This flame rune can be combined with runes from the @b{Conjurings of Rocks} collection to make flaming rocks.}
+
+      @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (rocks:my-mod-lang)
+           (hierarchy:my-mod-lang)
+           (fire-particles:my-mod-lang #:with-paren-runes? #t))
+         (parentify 
+           forest-rock 
+           flames)
+         flames-with-rock-demo.mp4)
+      }
+       
       )
     (rune-lore
       #:name "Fire Beam"
       #:rune (fire-beam-rune)
-      #:description "This rune creates a upright beam of fire."
+      #:description @md{
+      @b{Firebeard the Great} created this beam of fire to construct the illusion of cages to hold prisoners of war.  It held them, for a time. 
+
+      @(rune-code-example
+	 (fire-particles:my-mod-lang #:with-paren-runes? #t)
+	 (fire-beam)
+	 fire-beam-demo.mp4)
+      }
+
       )
     (rune-lore
       #:name "Explosion"
       #:rune (explosion-rune)
-      #:description "This rune creates a explosion lasting for just an instant."
+      #:description @md{
+      An illusion of an explosion, which @b{Firebeard the Great} employed as a stunning mechanism against the hordes.
+
+      @(rune-code-example
+	 (fire-particles:my-mod-lang #:with-paren-runes? #t)
+	 (explosion)
+	 explosion-demo.mp4)
+      
+      Who says fire and ice don't mix? Try these runes: 
+
+      @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (ice-particles:my-mod-lang)
+           (spawners:my-mod-lang)
+           (hierarchy:my-mod-lang)
+           (fire-particles:my-mod-lang #:with-paren-runes? #t))
+         (parentify 
+           ice-ball 
+           (spawner
+             explosion
+             ))
+         ice-explosion-spawner-demo.mp4)
+      }
       ))
-  #:preview-image (flames-rune))
+  #:preview-image preview.png)
 
