@@ -18,7 +18,7 @@ Open up `main.rkt` and adjust the `codespells-workspace` accordingly. Run.
 
 `(require-mod fire-particles)`
 
-This gives you access to fire-particles:rune-lang which you can combine into your mod's rune lang with `append-rune-langs`.
+This gives you access to `fire-particles:my-mod-lang` which you can combine into your mod's rune lang with `append-rune-langs`.
 
 ### Unreal Development
 

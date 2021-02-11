@@ -30,7 +30,7 @@
 
 (module+ main
   (codespells-workspace ;TODO: Change this to your local workspace if different
-   (build-path (current-directory) ".." "CodeSpellsWorkspace"))
+   (build-path (current-directory) ".." ".." ".." "CodeSpellsWorkspace"))
   
   (once-upon-a-time
    #:world (cave-world)
