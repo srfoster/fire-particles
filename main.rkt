@@ -13,6 +13,11 @@
   #:foreground (bitmap/url "https://static.thenounproject.com/png/898064-200.png")
   (spawn-mod-blueprint pak-folder mod-name "FireBeam"))
 
+(define-classic-rune (fire-storm)
+  #:background "red"
+  #:foreground (bitmap/url "https://static.thenounproject.com/png/26013-200.png")
+  (spawn-mod-blueprint pak-folder mod-name "Firestorm"))
+
 (define-classic-rune (explosion)
   #:background "red"
   #:foreground
@@ -21,7 +26,7 @@
 
 
 (define-classic-rune-lang my-mod-lang #:eval-from main.rkt
-  (flames fire-beam explosion))
+  (flames fire-beam explosion fire-storm))
 
 (module+ main
   (codespells-workspace ;TODO: Change this to your local workspace if different
