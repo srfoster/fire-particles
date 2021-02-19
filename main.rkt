@@ -1,7 +1,8 @@
-#lang codespells
+#lang at-exp codespells 
 
 (require fire-particles/mod-info)
 (require 2htdp/image)
+
 
 (define-classic-rune (flames)
   #:background "red"
@@ -24,7 +25,6 @@
   (bitmap/url  "https://static.thenounproject.com/png/2049313-200.png")
   (spawn-mod-blueprint pak-folder mod-name "Explosion"))
 
-
 (define-classic-rune-lang my-mod-lang #:eval-from main.rkt
   (flames fire-beam explosion fire-storm))
 
@@ -33,6 +33,6 @@
    (build-path (current-directory) ".." ".." ".." "CodeSpellsWorkspace"))
   
   (once-upon-a-time
-   #:world (cave-world)
+   #:world (demo-world)
    #:aether (demo-aether
              #:lang (my-mod-lang #:with-paren-runes? #t))))
